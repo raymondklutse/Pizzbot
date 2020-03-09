@@ -154,3 +154,18 @@ data/lookup_tables/pizza_amount.txt
 ## intent:pizza_questions
 - do you have [hawaii](pizza_type)
 - do you offer pizza [margherita](pizza_type)
+
+## intent:extra_order_negative
+- i am not done yet
+- actually no
+- nope
+- no
+
+## intent:extra_order_postive
+- all good
+- yeah
+- yep
+- yes
+- that's right
+- correct
+

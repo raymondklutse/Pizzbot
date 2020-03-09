@@ -11,6 +11,8 @@ intents:
   - item_size
   - item_amount
   - pizza_questions
+  - extra_order_postive
+  - extra_order_negative
 
 entities:
   - anti_pizza_type
@@ -49,6 +51,9 @@ actions:
   - utter_item_size
   - utter_item_amount
   - utter_pizza_questions
+  - utter_order_processing_positive
+  - utter_order_processing_negative
+  - utter_extra_order
 
 responses:
   utter_welcome_greet:
@@ -85,7 +90,17 @@ responses:
   - text : "how many would like?"
 
   utter_pizza_questions:
-  - text : "how many would like?"
+  - text : "what would you like on your pizza?"
+
+  utter_order_processing_positive:
+  - text : "Great. Your order is being processed. Please wait. We will get back to your shortly?"
+
+
+  utter_order_processing_negative:
+  - text : "Sorry, there is a problem with your order"
+
+  utter_extra_order:
+  - text : "Would you like to order anything else?"
 
 session_config:
   session_expiration_time: 60
