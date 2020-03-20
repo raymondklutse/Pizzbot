@@ -94,8 +94,7 @@ responses:
 
   utter_order_processing_positive:
   - text : "Great. Your order is being processed. Please wait. We will get back to your shortly?"
-
-
+  
   utter_order_processing_negative:
   - text : "Sorry, there is a problem with your order"
 
