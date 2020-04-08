@@ -31,6 +31,8 @@ slots:
     type: unfeaturized
   pizza_type:
     type: unfeaturized
+  requested_slot:
+    type: unfeaturized
 responses:
   utter_welcome_greet:
   - text: Hello!! I'm here to fulfill your pizza wishes. What would you like to have?
@@ -66,11 +68,11 @@ responses:
   - text: Sorry, there is a problem with your order
   utter_extra_order:
   - text: Would you like to order anything else?
-  utter_ask_{pizza_size}:
+  utter_ask_pizza_size:
   - text: What size of pizza do you want?
-  utter_ask_{pizza_type}:
+  utter_ask_pizza_type:
   - text: What type of pizza do you want?
-  utter_ask_{pizza_amount}:
+  utter_ask_pizza_amount:
   - text: How many pizzas do you want?
 actions:
 - utter_welcome_greet
@@ -89,6 +91,6 @@ actions:
 - utter_order_processing_negative
 - utter_extra_order
 - pizza_order_form
-- utter_ask_{pizza_size}
-- utter_ask_{pizza_type}
-- utter_ask_{pizza_amount}
+- utter_ask_pizza_size
+- utter_ask_pizza_type
+- utter_ask_pizza_amount

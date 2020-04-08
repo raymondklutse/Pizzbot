@@ -21,7 +21,7 @@ class PizzaOrderForm(FormAction):
 	@staticmethod
 	def required_slots(tracker: Tracker) -> List[Text]:
 		"""A list of required slots that the form has to fill"""
-		return ["pizza_size", "pizza_type", "pizza_amount"]
+		return ["pizza_type", "pizza_amount","pizza_size"]
 
 	def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
