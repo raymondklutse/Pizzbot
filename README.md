@@ -23,3 +23,13 @@ rasa test
 ```
 rasa shell
 ```
+
+## Interactive Rasa Tool
+install first [Rasa X](https://rasa.com/docs/rasa-x/) 
+```
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+```
+
+```
+rasa x
+```
