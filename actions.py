@@ -16,6 +16,7 @@ from rasa_sdk.executor import CollectingDispatcher
 class PizzaOrderForm(FormAction):
 
 	def name(self) -> Text:
+		"""Unique identifier of the form"""
 		return "pizza_order_form"
 
 	@staticmethod
@@ -26,7 +27,7 @@ class PizzaOrderForm(FormAction):
 	def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-
+		  """Define what the form has to do after all required slots are filled"""
 		pizza_size = tracker.get_slot("pizza_size")
 		pizza_type = tracker.get_slot("pizza_type")
 		pizza_amount = tracker.get_slot("pizza_amount")
