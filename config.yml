@@ -5,6 +5,7 @@ pipeline: "pretrained_embeddings_spacy"
 policies:
   - name: EmbeddingPolicy
     max_history: 5
-    epochs: 100
+    epochs: 150
   - name: MemoizationPolicy
   - name: MappingPolicy
+  - name: FormPolicy

@@ -27,12 +27,12 @@ class PizzaOrderForm(FormAction):
 	def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
-		  """Define what the form has to do after all required slots are filled"""
+		"""Define what the form has to do after all required slots are filled"""
 		pizza_size = tracker.get_slot("pizza_size")
 		pizza_type = tracker.get_slot("pizza_type")
 		pizza_amount = tracker.get_slot("pizza_amount")
 		
-		dispatcher.utter_message(text="Great, that's { } { } in { } can you confirm please".format(pizza_amount,pizza_type,pizza_size))
+		dispatcher.utter_message(text='Great, that is  {} {} in {}. Can you confirm please'.format(pizza_amount,pizza_type,pizza_size))
 		return []
 
     

@@ -22,6 +22,7 @@ entities:
 - pizza_size
 - pizza_type
 - pizza_amount
+- active_form_pizza_order_form
 slots:
   anti_pizza_type:
     type: unfeaturized
@@ -66,19 +67,14 @@ responses:
       shortly?
   utter_order_processing_negative:
   - text: Sorry, there is a problem with your order
-  
   utter_extra_order:
   - text: Would you like to order anything else?
-
   utter_ask_pizza_size:
   - text: What size of pizza do you want?
-
   utter_ask_pizza_type:
   - text: What type of pizza do you want?
-
   utter_ask_pizza_amount:
   - text: How many pizzas do you want?
-
 actions:
 - utter_welcome_greet
 - utter_item_confirm_no
