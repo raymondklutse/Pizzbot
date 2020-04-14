@@ -31,6 +31,11 @@ intents:
 - order_confirm_negative
 - order_confirm_positive
 - item_change
+- extra_order_negative
+- extra_order_postive
+- order_take_home
+- order_delivery
+- order_delivery_address
 
 - item_change_request_without_entity
 - item_type_start_negative
@@ -40,8 +45,6 @@ intents:
 - item_topping
 - item_amount
 - pizza_questions
-- extra_order_postive
-- extra_order_negative
 - item_type_start_positive
 - out_of_scope
 
@@ -56,7 +59,9 @@ actions:
 - utter_item_change
 - utter_extra_order
 - action_change_order
-
+- utter_final_order
+- utter_take_home_final
+- utter_delivery_address
 
 - utter_item_type_start_negative
 - utter_item_type_start_postive
@@ -96,6 +101,14 @@ responses:
   utter_extra_order:
   - text: Would you like to order anything else?
 
+  utter_final_order:
+  - text: Your total order is {pizza_amount} {pizza_type} pizzas in {pizza_size}. Do you prefer take away or home delivery?
+
+  utter_take_home_final:
+  - text: Here is your order number. Your order will be ready in 15 minutes. Thanks for the opportunity to serve you
+
+  utter_delivery_address:
+  - text: Please provide us with your home/ office address
 
 
   utter_item_type_start_negative:
@@ -111,8 +124,7 @@ responses:
   utter_pizza_questions:
   - text: what would you like on your pizza?
   utter_order_processing_positive:
-  - text: Great. Your order is being processed. Please wait. We will get back to your
-      shortly?
+  - text: Great. Your order is being processed. Please wait. We will get back to your shortly?
   utter_order_processing_negative:
   - text: Sorry, there is a problem with your order
  

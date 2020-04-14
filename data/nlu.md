@@ -174,6 +174,35 @@ data/lookup_tables/pizza_amount.txt
 - Yes
 - Yeah
 
+## intent:extra_order_negative
+- actually no
+- nope
+- no please
+- Nope
+- No,I am done
+
+## intent:extra_order_postive
+- yep
+- yeah
+- perfect
+- yes
+- Yes
+- Yeah
+
+## intent:order_take_home
+- take away
+- i prefer take away
+- take away please
+
+## intent:order_delivery
+- delivery please
+- delivery
+- i prefer delivery
+
+## intent:order_delivery_address
+- my address is #46, 655 avenue du technopole
+- #46, 655 avenue du technopole
+
 
 
 ## intent:item_change_request_without_entity

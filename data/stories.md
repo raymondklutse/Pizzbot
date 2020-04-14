@@ -42,6 +42,22 @@
 > confirm_order
 * order_confirm_positive
   - utter_extra_order
+* extra_order_negative
+  - utter_final_order
+> order_proceed
+
+## order take home
+> order_proceed
+* order_take_home
+  - utter_take_home_final
+
+
+## order delivery
+> order_proceed
+* order_delivery
+  - utter_delivery_address
+* order_delivery_address
+
 
 ## order_modify_prerequest
 > confirm_order_pre_question
