@@ -5,13 +5,14 @@ intents:
 - welcome_greet
 - item_confirm_no
 - item_confirm_yes
-- item_size_change
 - item_start_generic
-- item_type_change
+- item_change
+- item_change_request_without_entity
 - item_type_start_negative
 - item_type_start_postive
 - item_type
 - item_size
+- item_topping
 - item_amount
 - pizza_questions
 - extra_order_postive
@@ -95,3 +96,4 @@ actions:
 - utter_ask_pizza_size
 - utter_ask_pizza_type
 - utter_ask_pizza_amount
+- action_change_order

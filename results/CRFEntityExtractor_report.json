@@ -1,0 +1,38 @@
+{
+  "pizza_size": {
+    "precision": 0.9090909090909091,
+    "recall": 1.0,
+    "f1-score": 0.9523809523809523,
+    "support": 10
+  },
+  "pizza_amount": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9
+  },
+  "pizza_type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 17
+  },
+  "micro avg": {
+    "precision": 0.972972972972973,
+    "recall": 1.0,
+    "f1-score": 0.9863013698630138,
+    "support": 36
+  },
+  "macro avg": {
+    "precision": 0.9696969696969697,
+    "recall": 1.0,
+    "f1-score": 0.9841269841269842,
+    "support": 36
+  },
+  "weighted avg": {
+    "precision": 0.9747474747474748,
+    "recall": 1.0,
+    "f1-score": 0.9867724867724869,
+    "support": 36
+  }
+}
