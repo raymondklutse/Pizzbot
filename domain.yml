@@ -21,15 +21,17 @@ slots:
   requested_slot:
     type: unfeaturized
 
+forms:
+- pizza_order_form
+
 intents:
 - welcome_greet
 - init_request
-
-
-- item_confirm_no
-- item_confirm_yes
 - item_start_generic
+- order_confirm_negative
+- order_confirm_positive
 - item_change
+
 - item_change_request_without_entity
 - item_type_start_negative
 - item_type_start_postive
@@ -42,6 +44,29 @@ intents:
 - extra_order_negative
 - item_type_start_positive
 - out_of_scope
+
+actions:
+- utter_welcome_greet
+- utter_init_request
+- utter_ask_pizza_size
+- utter_ask_pizza_type
+- utter_ask_pizza_amount
+- utter_order_confirm_negative
+- utter_order_confirm_positive
+- utter_item_change
+- utter_extra_order
+- action_change_order
+
+
+- utter_item_type_start_negative
+- utter_item_type_start_postive
+- utter_item_type
+- utter_item_size
+- utter_item_amount
+- utter_pizza_questions
+- utter_order_processing_positive
+- utter_order_processing_negative
+
 
 responses:
   utter_welcome_greet:
@@ -59,20 +84,20 @@ responses:
   utter_ask_pizza_amount:
   - text: How many pizzas do you want?
 
-  utter_item_start_generic:
-  - text: Okay Great. Your order is {pizza_amount} {pizza_type} pizzas in {pizza_size}. Can you confirm please?
-
-  utter_item_confirm_no:
+  utter_order_confirm_negative:
   - text: What would you like to change?
-  utter_item_confirm_yes:
+
+  utter_order_confirm_positive:
   - text: Great. Anything else?
-  utter_item_size_change:
-  - text: No Problem, lets amend it to {pizza_amount} {pizza_size} {pizza_type} ok
-      . is that correct??
-  
-  utter_item_type_change:
-  - text: ok so you want {pizza_amount},{pizza_size} of {pizza_type} ok . Is that
-      correct?
+
+  utter_item_change:
+  - text: Ok! So you want {pizza_amount} {pizza_type} pizzas in {pizza_size}. Is that correct?
+
+  utter_extra_order:
+  - text: Would you like to order anything else?
+
+
+
   utter_item_type_start_negative:
   - text: sadly , we don't offer {pizza_type}
   utter_item_type_start_postive:
@@ -90,27 +115,5 @@ responses:
       shortly?
   utter_order_processing_negative:
   - text: Sorry, there is a problem with your order
-  utter_extra_order:
-  - text: Would you like to order anything else?
+ 
 
-actions:
-- utter_welcome_greet
-- utter_item_confirm_no
-- utter_item_confirm_yes
-- utter_item_size_change
-- utter_item_start_generic
-- utter_item_type_change
-- utter_item_type_start_negative
-- utter_item_type_start_postive
-- utter_item_type
-- utter_item_size
-- utter_item_amount
-- utter_pizza_questions
-- utter_order_processing_positive
-- utter_order_processing_negative
-- utter_extra_order
-- pizza_order_form
-- utter_ask_pizza_size
-- utter_ask_pizza_type
-- utter_ask_pizza_amount
-- action_change_order

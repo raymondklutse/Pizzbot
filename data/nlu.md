@@ -92,33 +92,19 @@ data/lookup_tables/pizza_amount.txt
 - long time no see
 - hello
 
-## intent:item_confirm_no
-- i am not done yet
-- actually no
-- nope
-- no
-
-## intent:item_confirm_yes
-- all good
-- yeah i am confirming it here
-- yep
-- yes
-- that's right
-- correct
-
-
-
-## intent:item_start_generic
-- [two](pizza_amount) [large](pizza_size) pizza [marherita](pizza_type) please
-- [jumbo](pizza_type)
-- [two](pizza_amount) please
-- [2](pizza_amount)
-- [large](pizza_size) please
-- just [one](pizza_amount)
-- order please
-- [one](pizza_amount) pizza [funghi](pizza_type)
-- i'd like [three](pizza_amount) [large](pizza_size) pizza [margherita](pizza_type)
-- I'd like to order [3](pizza_amount)  [large](pizza_size) [hawaii](pizza_type) please
+## intent:init_request
+- I want pizza
+- I want to order a pizza
+- pizza
+- Pizza please
+- Pizza will do
+- Pizza
+- pijja
+- pija
+- pijaa
+- wnt to oder pija
+- I wnt to ordr a pijja
+- I wntt piza
 - I want to order large pizza with olives
 - I like small olvs pizza
 - pepperoni smll pizza
@@ -137,18 +123,20 @@ data/lookup_tables/pizza_amount.txt
 - wnt to ordr least carn pijja
 - wont laarg peper pijaa
 - wnt mdm onins piza
-- I want pizza
-- I want to order a pizza
-- pizza
-- Pizza please
-- Pizza will do
-- Pizza
-- pijja
-- pija
-- pijaa
-- wnt to oder pija
-- I wnt to ordr a pijja
-- I wntt piza
+
+## intent:item_start_generic
+- [two](pizza_amount) [medium](pizza_size) pizza [marherita](pizza_type) please
+- [jumbo](pizza_type)
+- [hawaii](pizza_type) pizza
+- [two](pizza_amount) please
+- [2](pizza_amount)
+- [large](pizza_size) please
+- just [one](pizza_amount)
+- order please
+- I want [2](pizza_amount) [medium](pizza_size) pizza [hawaii](pizza_type) please
+- [one](pizza_amount) pizza [funghi](pizza_type)
+- i'd like [three](pizza_amount) [medium](pizza_size) pizza [margherita](pizza_type)
+- I'd like to order [3](pizza_amount)  [small](pizza_size) [hawaii](pizza_type) please
 
 ## intent:item_change
 - I changed my mind. Can I get  a [funghi](pizza_type) instead?
@@ -159,6 +147,34 @@ data/lookup_tables/pizza_amount.txt
 - I'd like in [small](pizza_size) instead.
 - actually, i would like a [small](pizza_size) [vegetarian](pizza_type).
 - wait, can i get  it in [large](pizza_size).
+- I want [funghi](pizza_type)
+- I want [funghi](pizza_type) instead
+- I want to change the size to [medium](pizza_size)
+- I want to change the size to [large](pizza_size)
+- I want my pizza in [small](pizza_size) instead
+
+## intent:order_confirm_negative
+- i am not done yet
+- actually no
+- nope
+- no
+- Nope
+- No, I want to make a change
+
+## intent:order_confirm_positive
+- all good
+- yeah i am confirming it here
+- yep
+- yeah
+- perfect
+- yes, that is right
+- yes
+- that's right
+- correct
+- Yes
+- Yeah
+
+
 
 ## intent:item_change_request_without_entity
 - Actually i want to modify pizza type.
