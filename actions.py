@@ -32,14 +32,14 @@ class PizzaOrderForm(FormAction):
 		pizza_type = tracker.get_slot("pizza_type")
 		pizza_amount = tracker.get_slot("pizza_amount")
 		
-		dispatcher.utter_message(text='Great, that is  {} {} in {}. Can you confirm please'.format(pizza_amount,pizza_type,pizza_size))
+		dispatcher.utter_message(text='Okay Great. Your order is {} {} pizzas in {}. Can you confirm please'.format(pizza_amount,pizza_type,pizza_size))
 		return []
 
 
-class action_change_order(Action):
+class ChangeOrderAction(Action):
+
 	def name(self):
 		return 'action_change_order'
-
 
 	def run(self, dispatcher, tracker, domain):
 		Slot_to_be_reset_name = tracker.get_slot("pizza_type")
