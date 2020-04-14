@@ -1,11 +1,30 @@
 language: en
 
-pipeline: "pretrained_embeddings_spacy"
+pipeline:
+  - name: SpacyNLP
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
 
 policies:
-  - name: EmbeddingPolicy
+  - name: TED Policy
     max_history: 5
     epochs: 140
   - name: MemoizationPolicy
   - name: MappingPolicy
   - name: FormPolicy
+    nlu_threshold: 0.3
+    ambiguity_threshold: 0.1
+    core_threshold: 0.3
+    fallback_action_name: 'action_default_fallback'

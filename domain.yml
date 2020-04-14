@@ -1,8 +1,31 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+entities:
+- anti_pizza_type
+- pizza_size
+- pizza_type
+- pizza_amount
+- active_form_pizza_order_form
+
+slots:
+  anti_pizza_type:
+    type: unfeaturized
+  pizza_amount:
+    type: unfeaturized
+  pizza_size:
+    type: unfeaturized
+  pizza_type:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+
 intents:
 - welcome_greet
+- init_request
+
+
 - item_confirm_no
 - item_confirm_yes
 - item_start_generic
@@ -18,26 +41,27 @@ intents:
 - extra_order_postive
 - extra_order_negative
 - item_type_start_positive
-entities:
-- anti_pizza_type
-- pizza_size
-- pizza_type
-- pizza_amount
-- active_form_pizza_order_form
-slots:
-  anti_pizza_type:
-    type: unfeaturized
-  pizza_amount:
-    type: unfeaturized
-  pizza_size:
-    type: unfeaturized
-  pizza_type:
-    type: unfeaturized
-  requested_slot:
-    type: unfeaturized
+- out_of_scope
+
 responses:
   utter_welcome_greet:
-  - text: Hello!! I'm here to fulfill your pizza wishes. What would you like to have?
+  - text: Hello There! Welcome to Pizzbot. How can I help you?
+
+  utter_init_request:
+  - text: Okay. In today's menu, we have Funghi, Hawaii, Margherita, Pepperoni, Vegetarian, all available in sizes Small, Medium or Large . What would you like to have?
+
+  utter_ask_pizza_size:
+  - text: What size of pizza do you want?
+
+  utter_ask_pizza_type:
+  - text: What type of pizza do you want?
+
+  utter_ask_pizza_amount:
+  - text: How many pizzas do you want?
+
+  utter_item_start_generic:
+  - text: Okay Great. Your order is {pizza_amount} {pizza_type} pizzas in {pizza_size}. Can you confirm please?
+
   utter_item_confirm_no:
   - text: What would you like to change?
   utter_item_confirm_yes:
@@ -45,9 +69,7 @@ responses:
   utter_item_size_change:
   - text: No Problem, lets amend it to {pizza_amount} {pizza_size} {pizza_type} ok
       . is that correct??
-  utter_item_start_generic:
-  - text: Great, that's {pizza_amount} {pizza_type} in {pizza_size} can you confirm
-      please
+  
   utter_item_type_change:
   - text: ok so you want {pizza_amount},{pizza_size} of {pizza_type} ok . Is that
       correct?
@@ -70,12 +92,7 @@ responses:
   - text: Sorry, there is a problem with your order
   utter_extra_order:
   - text: Would you like to order anything else?
-  utter_ask_pizza_size:
-  - text: What size of pizza do you want?
-  utter_ask_pizza_type:
-  - text: What type of pizza do you want?
-  utter_ask_pizza_amount:
-  - text: How many pizzas do you want?
+
 actions:
 - utter_welcome_greet
 - utter_item_confirm_no
