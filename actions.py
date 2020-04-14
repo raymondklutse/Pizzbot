@@ -42,13 +42,41 @@ class action_change_order(Action):
 
 
 	def run(self, dispatcher, tracker, domain):
-		Slot_to_be_reset_name = tracker.get_slot("pizza_type")
 		pizza_size = tracker.get_slot("pizza_size")
 		pizza_type = tracker.get_slot("pizza_type")
 		pizza_amount = tracker.get_slot("pizza_amount")
 		SlotSet("pizza_type", pizza_type)
 		SlotSet("pizza_size", pizza_size)
 		SlotSet("pizza_amount", pizza_amount)
+		return[]
+
+class action_pizza_order_add(Action):
+	def name(self):
+		return 'action_pizza_order_add'
+
+	def run(self, dispatcher, tracker, domain):
+		old_order=[]
+		pizza_size = tracker.get_slot("pizza_size")
+		pizza_type = tracker.get_slot("pizza_type")
+		pizza_amount = tracker.get_slot("pizza_amount")
+		order_details =  str(pizza_amount + " "+pizza_type + " is of "+pizza_size )
+		if tracker.get_slot("total_order") is None:
+			old_order.append(order_details)
+		print('here is my order', old_order)
+		SlotSet("total_order", pizza_size)
+		return[]
+
+class action_reset_pizza_form(FormAction):
+	def name(self):
+		return 'action_reset_pizza_form'
+
+	def run(self, dispatcher, tracker, domain):
+		pizza_size = tracker.get_slot("pizza_size")
+		pizza_type = tracker.get_slot("pizza_type")
+		pizza_amount = tracker.get_slot("pizza_amount")
+		SlotSet("pizza_type", None)
+		SlotSet("pizza_size", None)
+		SlotSet("pizza_amount", None)
 		return[]
 
     

@@ -18,12 +18,14 @@ intents:
 - extra_order_postive
 - extra_order_negative
 - item_type_start_positive
+
 entities:
 - anti_pizza_type
 - pizza_size
 - pizza_type
 - pizza_amount
 - active_form_pizza_order_form
+
 slots:
   anti_pizza_type:
     type: unfeaturized
@@ -35,6 +37,9 @@ slots:
     type: unfeaturized
   requested_slot:
     type: unfeaturized
+  total_order:
+    type: list
+
 responses:
   utter_welcome_greet:
   - text: Hello!! I'm here to fulfill your pizza wishes. What would you like to have?
@@ -76,6 +81,8 @@ responses:
   - text: What type of pizza do you want?
   utter_ask_pizza_amount:
   - text: How many pizzas do you want?
+  utter_order_add:
+  - text: which pizza like to add in your order?
 actions:
 - utter_welcome_greet
 - utter_item_confirm_no
@@ -97,3 +104,5 @@ actions:
 - utter_ask_pizza_type
 - utter_ask_pizza_amount
 - action_change_order
+- action_pizza_order_add
+- action_reset_pizza_form
