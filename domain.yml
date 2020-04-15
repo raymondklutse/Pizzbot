@@ -45,6 +45,8 @@ intents:
 - order_confirm_final
 - item_confirm_no
 - item_confirm_yes
+- response_negative
+- response_positive
 
 - item_change_request_without_entity
 - item_type_start_negative
@@ -133,7 +135,7 @@ responses:
   - text: which pizza like to add in your order?
 
   utter_default:
-  - text: Sorry, I didn’t understand that. Can you please retype your order
+  - text: Sorry, I didn’t understand that. Can you please retype it?
 
   utter_item_type_start_negative:
   - text: sadly , we don't offer {pizza_type}

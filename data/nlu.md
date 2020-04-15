@@ -133,6 +133,7 @@ fungi pizza small 5
 - I want [Funghi](pizza_type) [small](pizza_size) pizza [three](pizza_amount)
 - I want [four](pizza_amount) [small](pizza_size) pizza [Funghi](pizza_type)  
 - I want [2](pizza_amount) [medium](pizza_size) pizza [hawaii](pizza_type) please
+
 - [two](pizza_amount) [small](pizza_size) [Funghi](pizza_type) pizza 
 - [two](pizza_amount) [medium](pizza_size) [Margherita](pizza_type) pizza 
 - [2](pizza_amount) [large](pizza_size) [Hawaii](pizza_type) pizza 
@@ -152,11 +153,23 @@ fungi pizza small 5
 - [one](pizza_amount) [Pepperoni](pizza_type)[medium](pizza_size) pizza  
 - [3](pizza_amount) [Vegetarian](pizza_type) [small](pizza_size) pizza 
 
+- [one](pizza_amount) [Funghi](pizza_type) pizza [small](pizza_size)  
+- [one](pizza_amount) [Margherita](pizza_type) pizza [medium](pizza_size)  
+- [1](pizza_amount) [Hawaii](pizza_type) pizza [large](pizza_size)  
+- [one](pizza_amount) [Pepperoni](pizza_type) pizza[medium](pizza_size)   
+- [3](pizza_amount) [Vegetarian](pizza_type) pizza [small](pizza_size)  
+
 - [Funghi](pizza_type) [small](pizza_size) pizza [three](pizza_amount) 
 - [Margherita](pizza_type) [medium](pizza_size) pizza [6](pizza_amount) 
 - [Hawaii](pizza_type) [large](pizza_size) pizza [9](pizza_amount) 
 - [Pepperoni](pizza_type)[medium](pizza_size) pizza  [4](pizza_amount) 
 - [Vegetarian](pizza_type) [small](pizza_size) pizza [two](pizza_amount) 
+
+- [Funghi](pizza_type) pizza [small](pizza_size)  [three](pizza_amount) 
+- [Margherita](pizza_type) pizza [medium](pizza_size)  [6](pizza_amount) 
+- [Hawaii](pizza_type) pizza [large](pizza_size)  [9](pizza_amount) 
+- [Pepperoni](pizza_type) pizza [medium](pizza_size)   [4](pizza_amount) 
+- [Vegetarian](pizza_type) pizza[small](pizza_size)  [two](pizza_amount) 
 
 - [Funghi](pizza_type) pizza 
 - [Margherita](pizza_type) pizza 
@@ -164,6 +177,11 @@ fungi pizza small 5
 - [Pepperoni](pizza_type) pizza 
 - [Vegetarian](pizza_type) pizza pizza 
 
+- [Funghi](pizza_type) 
+- [Margherita](pizza_type) 
+- [Hawaii](pizza_type) 
+- [Pepperoni](pizza_type)
+- [Vegetarian](pizza_type)
 
 - [hawaii](pizza_type) pizza small
 - [hawaii](pizza_type) pizza small please
@@ -172,7 +190,6 @@ fungi pizza small 5
 - [two](pizza_amount) [medium](pizza_size) pizza [marherita](pizza_type) please
 
 - [jumbo](pizza_type)
-
 
 - [two](pizza_amount)
 - [2](pizza_amount)
@@ -184,8 +201,6 @@ fungi pizza small 5
 
 - just [one](pizza_amount)
 - just [1](pizza_amount)
-
-
 
 
 - [one](pizza_amount) pizza [funghi](pizza_type)
@@ -207,17 +222,15 @@ fungi pizza small 5
 - I want to change the size to [large](pizza_size)
 - I want my pizza in [small](pizza_size) instead
 
-## intent:order_confirm_negative
-- i am not done yet
+## intent:response_negative
 - actually no
 - nope
 - no
 - Nope
 - No, I want to make a change
 
-## intent:order_confirm_positive
+## intent:response_positive
 - all good
-- yeah i am confirming it here
 - yep
 - yeah
 - perfect
@@ -228,34 +241,6 @@ fungi pizza small 5
 - Yes
 - Yeah
 
-## intent:extra_order_negative
-- actually no
-- nope
-- no please
-- Nope
-- No,I am done
-
-## intent:extra_order_postive
-- yep
-- yeah
-- perfect
-- yes
-- Yes
-- Yeah
-
-## intent:item_confirm_no
-- i am not done yet
-- actually no
-- nope
-- no
-
-## intent:item_confirm_yes
-- all good
-- yeah i am confirming it here
-- yep
-- yes
-- that's right
-- correct
 
 
 ## intent:order_take_home
@@ -271,6 +256,14 @@ fungi pizza small 5
 ## intent:order_delivery_address
 - my address is #46, 655 avenue du technopole
 - #46, 655 avenue du technopole
+- house number 46 street 655 avenue du technopole
+- house num 46  655 avenue du technopole street
+- Hs No 46  655 avenue du technopole street
+- Hs No. 46  655 avenue du technopole street
+- my address is house number 46 street 655 avenue du technopole
+- my address is house num 46  655 avenue du technopole street
+- my address is Hs No 46  655 avenue du technopole street
+- my address is Hs No. 46  655 avenue du technopole street
 
 
 
@@ -331,19 +324,7 @@ fungi pizza small 5
 - do you have [hawaii](pizza_type)
 - do you offer pizza [margherita](pizza_type)
 
-## intent:extra_order_negative
-- i am not done yet
-- actually no
-- nope
-- no
 
-## intent:extra_order_postive
-- all good
-- yeah
-- yep
-- yes
-- that's right
-- correct
 
 <!---Lookup-->
 ## lookup:anti_pizza_type
@@ -383,6 +364,7 @@ data/lookup_tables/pizza_amount.txt
 - 10
 - 10 inch
 - small
+- Small
 - size S
 
 ## synonym:12"

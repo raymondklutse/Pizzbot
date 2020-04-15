@@ -22,7 +22,7 @@ policies:
     max_history: 5
     epochs: 150
   - name: AugmentedMemoizationPolicy
-    max_history: 2
+    max_history: 0
   - name: MappingPolicy
   - name: FormPolicy
   - name: FallbackPolicy
