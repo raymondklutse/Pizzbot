@@ -20,12 +20,13 @@ pipeline:
 policies:
   - name: TEDPolicy
     max_history: 5
-    epochs: 140
-  - name: MemoizationPolicy
+    epochs: 150
+  - name: AugmentedMemoizationPolicy
+    max_history: 2
   - name: MappingPolicy
   - name: FormPolicy
   - name: FallbackPolicy
-    nlu_threshold: 0.4
+    nlu_threshold: 0.3
     ambiguity_threshold: 0.1
-    core_threshold: 0.4
+    core_threshold: 0.3
     fallback_action_name: 'action_default_fallback'

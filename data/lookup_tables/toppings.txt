@@ -1,0 +1,4 @@
+meat
+cheese
+pepper
+vegetables

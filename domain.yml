@@ -8,6 +8,7 @@ entities:
 - pizza_type
 - pizza_amount
 - active_form_pizza_order_form
+- toppings
 
 slots:
   anti_pizza_type:
@@ -18,8 +19,12 @@ slots:
     type: unfeaturized
   pizza_type:
     type: unfeaturized
+  toppings:
+    type: unfeaturized
   requested_slot:
     type: unfeaturized
+  total_order:
+    type: list
 
 forms:
 - pizza_order_form
@@ -27,6 +32,7 @@ forms:
 intents:
 - welcome_greet
 - init_request
+- init_pizza_question
 - item_start_generic
 - order_confirm_negative
 - order_confirm_positive
@@ -36,6 +42,9 @@ intents:
 - order_take_home
 - order_delivery
 - order_delivery_address
+- order_confirm_final
+- item_confirm_no
+- item_confirm_yes
 
 - item_change_request_without_entity
 - item_type_start_negative
@@ -51,6 +60,7 @@ intents:
 actions:
 - utter_welcome_greet
 - utter_init_request
+- utter_init_pizza_question
 - utter_ask_pizza_size
 - utter_ask_pizza_type
 - utter_ask_pizza_amount
@@ -58,10 +68,13 @@ actions:
 - utter_order_confirm_positive
 - utter_item_change
 - utter_extra_order
-- action_change_order
 - utter_final_order
-- utter_take_home_final
+- utter_total_order_final
+- utter_order_complete
 - utter_delivery_address
+- action_change_order
+- action_pizza_order_add
+- action_reset_pizza_form
 
 - utter_item_type_start_negative
 - utter_item_type_start_postive
@@ -79,6 +92,9 @@ responses:
 
   utter_init_request:
   - text: Okay. In today's menu, we have Funghi, Hawaii, Margherita, Pepperoni, Vegetarian, all available in sizes Small, Medium or Large . What would you like to have?
+
+  utter_init_pizza_question:
+  - text: For pizza without meat we have.... For pizza without cheese we have. Sizes available are Small, Medium and Large. What would you love to have?
 
   utter_ask_pizza_size:
   - text: What size of pizza do you want?
@@ -104,12 +120,20 @@ responses:
   utter_final_order:
   - text: Your total order is {pizza_amount} {pizza_type} pizzas in {pizza_size}. Do you prefer take away or home delivery?
 
-  utter_take_home_final:
+  utter_total_order_final:
+  - text: Here is your total order,{total_order} .Do you prefer takeaway or home delivery
+
+  utter_order_complete:
   - text: Here is your order number. Your order will be ready in 15 minutes. Thanks for the opportunity to serve you
 
   utter_delivery_address:
   - text: Please provide us with your home/ office address
 
+  utter_order_add:
+  - text: which pizza like to add in your order?
+
+  utter_default:
+  - text: Sorry, I didn’t understand that. Can you please retype your order
 
   utter_item_type_start_negative:
   - text: sadly , we don't offer {pizza_type}

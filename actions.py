@@ -35,14 +35,11 @@ class PizzaOrderForm(FormAction):
 		dispatcher.utter_message(text='Okay Great. Your order is {} {} pizzas in {}. Can you confirm please'.format(pizza_amount,pizza_type,pizza_size))
 		return []
 
-
-class ChangeOrderAction(Action):
-
+class ActionChangeOrder(Action):
 	def name(self):
 		return 'action_change_order'
 
 	def run(self, dispatcher, tracker, domain):
-		Slot_to_be_reset_name = tracker.get_slot("pizza_type")
 		pizza_size = tracker.get_slot("pizza_size")
 		pizza_type = tracker.get_slot("pizza_type")
 		pizza_amount = tracker.get_slot("pizza_amount")
@@ -51,4 +48,32 @@ class ChangeOrderAction(Action):
 		SlotSet("pizza_amount", pizza_amount)
 		return[]
 
-    
+class ActionPizzaOrderAdd(Action):
+	def name(self):
+		return 'action_pizza_order_add'
+
+	def run(self, dispatcher, tracker, domain):
+		pizza_size = tracker.get_slot("pizza_size")
+		pizza_type = tracker.get_slot("pizza_type")
+		pizza_amount = tracker.get_slot("pizza_amount")
+		order_details =  str(pizza_amount + " "+pizza_type + " is of "+pizza_size )
+		old_order = tracker.get_slot("total_order")
+		return[SlotSet("total_order", [order_details]) if old_order is None else SlotSet("total_order", [old_order[0]+' and '+order_details])]
+
+class ActionResetPizzaForm(Action):
+	def name(self):
+		return 'action_reset_pizza_form'
+
+	def run(self, dispatcher, tracker, domain):
+
+		return[SlotSet("pizza_type", None),SlotSet("pizza_size", None),SlotSet("pizza_amount", None)]
+
+
+class ActionPizzaQuestions(Action):
+	def name(self):
+		return 'action_pizza_questions'
+
+
+	def run(self, dispatcher, tracker, domain):
+		
+		return[]
