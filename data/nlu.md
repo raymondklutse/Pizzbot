@@ -106,19 +106,19 @@ data/lookup_tables/pizza_amount.txt
 - that's right
 - correct
 
-
-
-## intent:item_start_generic
-- [two](pizza_amount) [large](pizza_size) pizza [marherita](pizza_type) please
-- [jumbo](pizza_type)
-- [two](pizza_amount) please
-- [2](pizza_amount)
-- [large](pizza_size) please
-- just [one](pizza_amount)
-- order please
-- [one](pizza_amount) pizza [funghi](pizza_type)
-- i'd like [three](pizza_amount) [large](pizza_size) pizza [margherita](pizza_type)
-- I'd like to order [3](pizza_amount)  [large](pizza_size) [hawaii](pizza_type) please
+## intent:init_request
+- I want pizza
+- I want to order a pizza
+- pizza
+- Pizza please
+- Pizza will do
+- Pizza
+- pijja
+- pija
+- pijaa
+- wnt to oder pija
+- I wnt to ordr a pijja
+- I wntt piza
 - I want to order large pizza with olives
 - I like small olvs pizza
 - pepperoni smll pizza
@@ -137,18 +137,20 @@ data/lookup_tables/pizza_amount.txt
 - wnt to ordr least carn pijja
 - wont laarg peper pijaa
 - wnt mdm onins piza
-- I want pizza
-- I want to order a pizza
-- pizza
-- Pizza please
-- Pizza will do
-- Pizza
-- pijja
-- pija
-- pijaa
-- wnt to oder pija
-- I wnt to ordr a pijja
-- I wntt piza
+
+## intent:item_start_generic
+- [two](pizza_amount) [medium](pizza_size) pizza [marherita](pizza_type) please
+- [jumbo](pizza_type)
+- [hawaii](pizza_type) pizza
+- [two](pizza_amount) please
+- [2](pizza_amount)
+- [large](pizza_size) please
+- just [one](pizza_amount)
+- order please
+- I want [2](pizza_amount) [medium](pizza_size) pizza [hawaii](pizza_type) please
+- [one](pizza_amount) pizza [funghi](pizza_type)
+- i'd like [three](pizza_amount) [medium](pizza_size) pizza [margherita](pizza_type)
+- I'd like to order [3](pizza_amount)  [small](pizza_size) [hawaii](pizza_type) please
 
 ## intent:item_change
 - I changed my mind. Can I get  a [funghi](pizza_type) instead?
@@ -209,6 +211,7 @@ data/lookup_tables/pizza_amount.txt
 - Onions
 - Corn
 
+
 ## intent:item_amount
 - [3](pizza_amount)
 - [2](pizza_amount)
@@ -231,3 +234,24 @@ data/lookup_tables/pizza_amount.txt
 - that's right
 - correct
 
+## intent:order_take_home
+- take away
+- i prefer take away
+- take away please
+
+## intent:order_delivery
+- delivery please
+- delivery
+- i prefer delivery
+
+## intent:order_delivery_address
+- my address is #46, 655 avenue du technopole
+- #46, 655 avenue du technopole
+
+## intent:order_confirm_negative
+- i am not done yet
+- actually no
+- nope
+- no
+- Nope
+- No, I want to make a change
