@@ -51,6 +51,7 @@ data/lookup_tables/pizza_amount.txt
 - 14
 - 14 inch
 - large
+- Large
 - size L
 
 ## synonym:18"
@@ -62,9 +63,11 @@ data/lookup_tables/pizza_amount.txt
 <!---Pizza Type-->
 ## synonym:Funghi
 - Funghi
+- funghi
 
 ## synonym:Hawaii
 - Hawaii
+- hawaii
 
 ## synonym:Margherita
 - Margherita
@@ -78,6 +81,7 @@ data/lookup_tables/pizza_amount.txt
 - Vegetaria
 - Vegetable
 - Vegetarian
+- vegetarian
 
 <!------------Intents---------------->
 ## intent:welcome_greet
@@ -141,12 +145,9 @@ data/lookup_tables/pizza_amount.txt
 ## intent:item_start_generic
 - [two](pizza_amount) [medium](pizza_size) pizza [marherita](pizza_type) please
 - [jumbo](pizza_type)
-- [hawaii](pizza_type) pizza
-- [two](pizza_amount) please
-- [2](pizza_amount)
-- [large](pizza_size) please
-- just [one](pizza_amount)
-- order please
+- [hawaii](pizza_type) pizza [two](pizza_amount) please
+- i want to order [2](pizza_amount) pizza.
+- can i have [large](pizza_size) pizza please
 - I want [2](pizza_amount) [medium](pizza_size) pizza [hawaii](pizza_type) please
 - [one](pizza_amount) pizza [funghi](pizza_type)
 - i'd like [three](pizza_amount) [medium](pizza_size) pizza [margherita](pizza_type)
@@ -161,6 +162,7 @@ data/lookup_tables/pizza_amount.txt
 - I'd like in [small](pizza_size) instead.
 - actually, i would like a [small](pizza_size) [vegetarian](pizza_type).
 - wait, can i get  it in [large](pizza_size).
+- i want [large](pizza_size).
 
 ## intent:item_change_request_without_entity
 - Actually i want to modify pizza type.
@@ -220,19 +222,6 @@ data/lookup_tables/pizza_amount.txt
 - do you have [hawaii](pizza_type)
 - do you offer pizza [margherita](pizza_type)
 
-## intent:extra_order_negative
-- i am not done yet
-- actually no
-- nope
-- no
-
-## intent:extra_order_postive
-- all good
-- yeah
-- yep
-- yes
-- that's right
-- correct
 
 ## intent:order_take_home
 - take away
@@ -248,10 +237,11 @@ data/lookup_tables/pizza_amount.txt
 - my address is #46, 655 avenue du technopole
 - #46, 655 avenue du technopole
 
-## intent:order_confirm_negative
-- i am not done yet
-- actually no
+## intent:order_confirm_final
+- i am done
+- actually i dont want anything else
+- no i am done now.
+- no i am done.
 - nope
-- no
-- Nope
-- No, I want to make a change
+- no.
+

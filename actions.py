@@ -60,7 +60,6 @@ class ActionPizzaOrderAdd(Action):
 		pizza_amount = tracker.get_slot("pizza_amount")
 		order_details =  str(pizza_amount + " "+pizza_type + " is of "+pizza_size )
 		old_order = tracker.get_slot("total_order")
-		print(old_order,order_details)
 		return[SlotSet("total_order", [order_details]) if old_order is None else SlotSet("total_order", [old_order[0]+' and '+order_details])]
 
 class ActionResetPizzaForm(Action):

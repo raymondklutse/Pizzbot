@@ -21,18 +21,18 @@
 > confirm_order
 > confirm_order_pre_question
 
-## order_modify_prerequest
+## story_modify_prerequest
 > confirm_order_pre_question
 * item_change_request_without_entity
   - utter_item_type
 > confirm_order
 
-## story_to_proceed_furthur
+## story_to_modify_order_2
 > confirm_order
-* item_confirm_yes
-  - utter_extra_order
-  - action_pizza_order_add
-> confirmed_order_proceed
+* item_confirm_no
+  - utter_order_confirm_negative
+> confirm_order
+> confirm_order_pre_question
 
 ## story_to_modify_order
 > confirm_order
@@ -41,11 +41,12 @@
   - utter_item_change
 > confirm_order
 
-## story_to_modify_order_2
+## story_to_proceed_furthur
 > confirm_order
-* order_confirm_negative
-  - utter_order_confirm_negative
-> confirm_order
+* item_confirm_yes
+  - action_pizza_order_add
+  - utter_extra_order
+> confirmed_order_proceed
 
 ## story_to_add_new_order
 > confirmed_order_proceed
@@ -56,7 +57,7 @@
 
 ## story_to_proceed_with_confirm_order
 > confirmed_order_proceed
-* item_confirm_no
+* order_confirm_final
   - utter_total_order_final
 > order_proceed
 
@@ -70,4 +71,5 @@
 * order_delivery
   - utter_delivery_address
 * order_delivery_address
+  - utter_delivery_address_final
 
