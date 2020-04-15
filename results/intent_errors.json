@@ -1,0 +1,274 @@
+[
+  {
+    "text": "all good",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.2733987766785189
+    }
+  },
+  {
+    "text": "yeah",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.3118898780133905
+    }
+  },
+  {
+    "text": "yep",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.2761541506641961
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.2837870031483616
+    }
+  },
+  {
+    "text": "that's right",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.2804713456942009
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "item_confirm_yes",
+    "intent_prediction": {
+      "name": "extra_order_postive",
+      "confidence": 0.2715857530664394
+    }
+  },
+  {
+    "text": "wnt to odr mdim tamatas pija",
+    "intent": "item_start_generic",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.25592671555475016
+    }
+  },
+  {
+    "text": "pijja",
+    "intent": "item_none",
+    "intent_prediction": {
+      "name": "item_topping",
+      "confidence": 0.37572379560016106
+    }
+  },
+  {
+    "text": "pijaa",
+    "intent": "item_none",
+    "intent_prediction": {
+      "name": "item_topping",
+      "confidence": 0.37572379560016106
+    }
+  },
+  {
+    "text": "I'd like a  margherita pizza instead.",
+    "intent": "item_type_change",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.20714950581792663
+    }
+  },
+  {
+    "text": "can i get a vegetarian instead?",
+    "intent": "item_type_change",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.17303918693027806
+    }
+  },
+  {
+    "text": "do you have Americana",
+    "intent": "item_type_start_negative",
+    "intent_prediction": {
+      "name": "welcome_greet",
+      "confidence": 0.1504526752224976
+    }
+  },
+  {
+    "text": "do you offer pizza Americana",
+    "intent": "item_type_start_negative",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.1342838654388735
+    }
+  },
+  {
+    "text": "do you have hawaii",
+    "intent": "item_type_start_positive",
+    "intent_prediction": {
+      "name": "welcome_greet",
+      "confidence": 0.20133583314045608
+    }
+  },
+  {
+    "text": "do you offer pizza margherita",
+    "intent": "item_type_start_positive",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.19912396951228564
+    }
+  },
+  {
+    "text": "hawaii](pizza_type)",
+    "intent": "item_type",
+    "intent_prediction": {
+      "name": "item_topping",
+      "confidence": 0.28890444930033776
+    }
+  },
+  {
+    "text": "margherita",
+    "intent": "item_type",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.13107835559822711
+    }
+  },
+  {
+    "text": "small",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.3580036546417499
+    }
+  },
+  {
+    "text": "I want to order Large pizza",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.34157752815948994
+    }
+  },
+  {
+    "text": "I want a Laarg pizza",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.23346231815583351
+    }
+  },
+  {
+    "text": "medim pija",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.23237223188811582
+    }
+  },
+  {
+    "text": "huge pijja",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.2948689337019634
+    }
+  },
+  {
+    "text": "Little piza",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.2736265107956381
+    }
+  },
+  {
+    "text": "smll",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_topping",
+      "confidence": 0.37572379560016106
+    }
+  },
+  {
+    "text": "midum",
+    "intent": "item_size",
+    "intent_prediction": {
+      "name": "item_topping",
+      "confidence": 0.37572379560016106
+    }
+  },
+  {
+    "text": "I want to order pizza with OLIVES",
+    "intent": "item_topping",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.42707496480739504
+    }
+  },
+  {
+    "text": "3",
+    "intent": "item_amount",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.3148224912290674
+    }
+  },
+  {
+    "text": "2",
+    "intent": "item_amount",
+    "intent_prediction": {
+      "name": "item_start_generic",
+      "confidence": 0.33884661624543055
+    }
+  },
+  {
+    "text": "do you have hawaii",
+    "intent": "pizza_questions",
+    "intent_prediction": {
+      "name": "welcome_greet",
+      "confidence": 0.20133583314045608
+    }
+  },
+  {
+    "text": "do you offer pizza margherita",
+    "intent": "pizza_questions",
+    "intent_prediction": {
+      "name": "item_none",
+      "confidence": 0.19912396951228564
+    }
+  },
+  {
+    "text": "i am not done yet",
+    "intent": "extra_order_negative",
+    "intent_prediction": {
+      "name": "item_confirm_no",
+      "confidence": 0.19902850553420165
+    }
+  },
+  {
+    "text": "actually no",
+    "intent": "extra_order_negative",
+    "intent_prediction": {
+      "name": "item_confirm_no",
+      "confidence": 0.20363824596569438
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "extra_order_negative",
+    "intent_prediction": {
+      "name": "item_confirm_no",
+      "confidence": 0.20712206273435757
+    }
+  },
+  {
+    "text": "no",
+    "intent": "extra_order_negative",
+    "intent_prediction": {
+      "name": "item_confirm_no",
+      "confidence": 0.22974719716090808
+    }
+  }
+]

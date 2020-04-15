@@ -1,0 +1,19 @@
+[
+  {
+    "text": "large",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "14\"",
+        "entity": "pizza_size",
+        "confidence": 0.5103794932612097,
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

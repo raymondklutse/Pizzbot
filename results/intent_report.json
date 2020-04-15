@@ -1,0 +1,161 @@
+{
+  "item_type": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "item_topping": 1,
+      "item_none": 1
+    }
+  },
+  "item_size": {
+    "precision": 1.0,
+    "recall": 0.38461538461538464,
+    "f1-score": 0.5555555555555556,
+    "support": 13,
+    "confused_with": {
+      "item_start_generic": 4,
+      "item_topping": 2
+    }
+  },
+  "extra_order_negative": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4,
+    "confused_with": {
+      "item_confirm_no": 4
+    }
+  },
+  "extra_order_postive": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 6,
+    "confused_with": {}
+  },
+  "item_type_start_negative": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "welcome_greet": 1,
+      "item_none": 1
+    }
+  },
+  "pizza_questions": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "welcome_greet": 1,
+      "item_none": 1
+    }
+  },
+  "item_confirm_no": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 4,
+    "confused_with": {}
+  },
+  "item_start_generic": {
+    "precision": 0.75,
+    "recall": 0.9642857142857143,
+    "f1-score": 0.8437499999999999,
+    "support": 28,
+    "confused_with": {
+      "item_none": 1
+    }
+  },
+  "item_amount": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "item_start_generic": 2
+    }
+  },
+  "item_topping": {
+    "precision": 0.7222222222222222,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.8125000000000001,
+    "support": 14,
+    "confused_with": {
+      "item_start_generic": 1
+    }
+  },
+  "item_size_change": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "item_type_start_positive": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "welcome_greet": 1,
+      "item_none": 1
+    }
+  },
+  "item_confirm_yes": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {
+      "extra_order_postive": 6
+    }
+  },
+  "item_type_change": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 4,
+    "confused_with": {
+      "item_start_generic": 2
+    }
+  },
+  "item_none": {
+    "precision": 0.5882352941176471,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.6896551724137931,
+    "support": 12,
+    "confused_with": {
+      "item_topping": 2
+    }
+  },
+  "welcome_greet": {
+    "precision": 0.7692307692307693,
+    "recall": 1.0,
+    "f1-score": 0.8695652173913044,
+    "support": 10,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.7043478260869566,
+    "recall": 0.7043478260869566,
+    "f1-score": 0.7043478260869566,
+    "support": 115
+  },
+  "macro avg": {
+    "precision": 0.4268555178481649,
+    "recall": 0.4756753663003663,
+    "f1-score": 0.4231891215850408,
+    "support": 115
+  },
+  "weighted avg": {
+    "precision": 0.6248890637637441,
+    "recall": 0.7043478260869566,
+    "f1-score": 0.6306701721602966,
+    "support": 115
+  }
+}

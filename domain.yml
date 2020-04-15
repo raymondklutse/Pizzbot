@@ -1,0 +1,156 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+- welcome_greet
+- init_request
+- init_pizza_question
+- item_start_generic
+- order_confirm_negative
+- order_confirm_positive
+- item_change
+- extra_order_negative
+- extra_order_postive
+- order_take_home
+- order_delivery
+- order_delivery_address
+- order_confirm_final
+- item_confirm_no
+- item_confirm_yes
+- response_negative
+- response_positive
+- response_name_phone
+- item_change_request_without_entity
+- item_type_start_negative
+- item_type_start_postive
+- item_type
+- item_size
+- item_topping
+- item_amount
+- pizza_questions
+- item_type_start_positive
+- out_of_scope
+
+entities:
+- anti_pizza_type
+- pizza_size
+- pizza_type
+- pizza_amount
+- active_form_pizza_order_form
+- toppings
+- client_name
+- phone_number
+- order_number
+
+slots:
+  anti_pizza_type:
+    type: unfeaturized
+  client_name:
+    type: text
+  order_number:
+    type: text
+  phone_number:
+    type: text
+  pizza_amount:
+    type: unfeaturized
+  pizza_size:
+    type: unfeaturized
+  pizza_type:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  toppings:
+    type: unfeaturized
+  total_order:
+    type: list
+
+responses:
+  utter_welcome_greet:
+  - text: Hello There! Welcome to Pizzbot. How can I help you?
+  utter_init_request:
+  - text: Okay. In today's menu, we have Funghi, Hawaii, Margherita, Pepperoni, Vegetarian,
+      all available in sizes Small, Medium or Large . What would you like to have?
+  utter_init_pizza_question:
+  - text: For pizza without meat we have.... For pizza without cheese we have. Sizes
+      available are Small, Medium and Large. What would you love to have?
+  utter_ask_pizza_size:
+  - text: What size of pizza do you want?
+  utter_ask_pizza_type:
+  - text: What type of pizza do you want?
+  utter_ask_pizza_amount:
+  - text: How many pizzas do you want?
+  utter_order_confirm_negative:
+  - text: What would you like to change?
+  utter_order_confirm_positive:
+  - text: Great. Anything else?
+  utter_item_change:
+  - text: Ok! So you want {pizza_amount} {pizza_type} pizzas in {pizza_size}. Is that
+      correct?
+  utter_extra_order:
+  - text: Would you like to order anything else?
+  utter_final_order:
+  - text: Your total order is {pizza_amount} {pizza_type} pizzas in {pizza_size}.
+      Do you prefer take away or home delivery?
+  utter_total_order_final:
+  - text: Do you prefer takeaway or home delivery
+  utter_name_phone:
+  - text: Here is your total order, {total_order} . what is your name and phone number?
+  utter_order_complete:
+  - text: Here is your order number {order_number}. Your order will be ready in 15
+      minutes. Thanks for the opportunity to serve you
+  utter_delivery_address:
+  - text: Please provide us with your home/ office address
+  utter_order_add:
+  - text: which pizza like to add in your order?
+  utter_default:
+  - text: Sorry, I didn’t understand that. Can you please retype it?
+  utter_item_type_start_negative:
+  - text: sadly , we don't offer {pizza_type}
+  utter_item_type_start_postive:
+  - text: yes, we do offer {pizza_type} would you like to order one?
+  utter_item_type:
+  - text: what pizza type would you like?
+  utter_item_size:
+  - text: what size do you want your {pizza_type} in
+  utter_item_amount:
+  - text: how many would like?
+  utter_pizza_questions:
+  - text: what would you like on your pizza?
+  utter_order_processing_positive:
+  - text: Great. Your order is being processed. Please wait. We will get back to your
+      shortly?
+  utter_order_processing_negative:
+  - text: Sorry, there is a problem with your order
+actions:
+- utter_welcome_greet
+- utter_init_request
+- utter_init_pizza_question
+- utter_ask_pizza_size
+- utter_ask_pizza_type
+- utter_ask_pizza_amount
+- utter_order_confirm_negative
+- utter_order_confirm_positive
+- utter_item_change
+- utter_extra_order
+- utter_final_order
+- utter_total_order_final
+- utter_name_phone
+- utter_order_complete
+- utter_delivery_address
+- action_change_order
+- action_pizza_order_add
+- action_reset_pizza_form
+- action_order_number
+- utter_item_type_start_negative
+- utter_item_type_start_postive
+- utter_item_type
+- utter_item_size
+- utter_item_amount
+- utter_pizza_questions
+- utter_order_processing_positive
+- utter_order_processing_negative
+- utter_order_add
+- utter_default
+forms:
+- pizza_order_form
