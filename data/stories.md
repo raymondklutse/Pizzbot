@@ -1,4 +1,4 @@
-##greeting
+## greeting
 * welcome_greet
   - utter_welcome_greet
 > start_questions_on_pizza
